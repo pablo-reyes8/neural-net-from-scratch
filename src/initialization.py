@@ -34,6 +34,9 @@ def iniciar_parametros(shape_nn:list , inicialization='Rand' , he_init = None , 
     dim_layer = len(shape_nn)
     bools = [False] + [bool(x) for x in he_init]
 
+    if inicialization == 'He_Normal' and he_init == None:
+        bools = [False] + [1 for _ in len(shape_nn)-1]
+
     if inicialization == 'Rand':
         for i in range(1, dim_layer):
             parameters['W' + str(i)] = np.random.randn(shape_nn[i],shape_nn[i-1]) * escala

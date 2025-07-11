@@ -106,7 +106,7 @@ def predict(X , y , parameters, activations , train = False , reg = False , lamb
     
 
 def model_nn_scratch(X, Y, layers_dims , activations, optimizer , init=None ,He_inits = None, learning_rate = 0.001, mini_batch_size = 128, beta = 0.9,
-          beta1 = 0.9, beta2 = 0.999,  epsilon = 1e-8, num_epochs = 5000, print_cost = True, decay=None, decay_rate=1 , regularization = None , lambda_l2 = None):
+          beta1 = 0.9, beta2 = 0.999,  epsilon = 1e-8, num_epochs = 5000, print_cost = True, decay=None, decay_rate=1 , regularization = None , lambda_l2 = 0.001):
     
     """Train a deep neural network from scratch with optional optimizers, learning-rate decay, and L2 regularization.
 
