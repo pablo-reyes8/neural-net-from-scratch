@@ -171,7 +171,7 @@ def model_nn_scratch(X, Y, layers_dims , activations, optimizer , init=None ,He_
     elif init == 'He':
         parameters = iniciar_parametros(layers_dims , inicialization='He_Normal' , he_init = He_inits)
     else:
-        return f'Inicializacion de pesos no valida'
+        raise ValueError('Inicializacion de pesos no valida')
 
     # Initialize optimizer state
     if optimizer == 'Adam':
@@ -179,7 +179,7 @@ def model_nn_scratch(X, Y, layers_dims , activations, optimizer , init=None ,He_
     elif optimizer == 'gd':
         pass 
     else:
-        return f'Optimizacion no reconocidio'
+        raise ValueError('Optimizacion no reconocidio')
     
     # Determine print interval
     if num_epochs < 100:
