@@ -32,11 +32,15 @@ def iniciar_parametros(shape_nn:list , inicialization='Rand' , he_init = None , 
     parameters = {}
 
     dim_layer = len(shape_nn)
-    bools = [False] + [bool(x) for x in he_init]
+
 
     if inicialization == 'He_Normal' and he_init == None:
-        bools = [False] + [1 for _ in len(shape_nn)-1]
+        bools = [False] + [1 for _ in range(len(shape_nn)-1)]
         he_init = bools[1:]
+    elif inicialization == 'He_Normal' and isinstance(he_init , list):
+        bools = [False] + [bool(x) for x in he_init]
+    elif inicialization == 'He_Normal' and not(isinstance(he_init , list)):
+        raise ValueError('He_init debe ser una lista')
 
     if inicialization == 'Rand':
         for i in range(1, dim_layer):
