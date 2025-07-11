@@ -17,7 +17,7 @@ This project provides a modular Python framework for building and training feed-
 | **Data/Diabetes_1.csv**                            | Diabetes dataset for un balanced classification scenarios.                       |
 | **Data/schizophrenia_dataset.csv**                 | Schizophrenia dataset for clasification.                                         |
 | **jupyter_notebooks/nn_scratch Full.ipynb**        | End-to-end demo: code walkthrough, training loop, and model evaluation. This Jupyter includes all the function that you can find in `src/` in one place.          |
-| **jupyter_notebooks/training_experiments.ipynb**   | This jupyter uses `src/` functions to train and adjust Hyperparameter, learning-rate decay studies, and accuracy/cost plots on the diabetes and Schizophrenia dataset.     |
+| **jupyter_notebooks/training_experiments.ipynb**   | This jupyter uses `src/` functions to train and adjust Hyperparameter, learning-rate decay studies, and accuracy/cost plots on the diabetes and Schizophrenia dataset. We also use Lasso regression for features    |
 | **src/activations.py**                             | Definitions of ReLU, Sigmoid, Tanh, LeakyReLu, and Softmax activation functions.           |
 | **src/initialization.py**                          | Weight initialization routines: random scaling and He normal.                    |
 | **src/layers.py**                                  | Layer operations: `one_layer_forward`, `forward_pass`, and `back_propagation`.   |
@@ -26,6 +26,11 @@ This project provides a modular Python framework for building and training feed-
 | **src/utils.py**                                   | Preprocessing helpers: mini-batch generator, train/val/test split, standardization, label encoding and functions for ploting the error and ROC curve. |
 
 
+## Core Dependencies
+
+```bash
+pip install pandas numpy  matplotlib sckit-learn
+```
 
 
 ## Collaborate  
