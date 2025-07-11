@@ -32,6 +32,26 @@ This project provides a modular Python framework for building and training feed-
 pip install pandas numpy  matplotlib sckit-learn
 ```
 
+## Quickstart / Usage example
+
+```python
+from src.training import model_nn_scratch
+model, costs = model_nn_scratch(X, y, [n_x,32,16,1], ['relu','relu','sigmoid'], 
+                                 optimizer='Adam', init='He', num_epochs=200 ,
+                                learning_rate = 0.0001 , regularization ='L2')
+```
+
+## Future Work
+
+- **Dropout & Batch Normalization**  
+  Integrate dropout layers and batch-norm to improve generalization and training stability in deeper architectures.
+
+- **Regression Support & MSE Loss**  
+  Extend the framework to handle regression tasks by adding mean-squared error (MSE) loss and linear output layers.
+
+- **Additional Optimizers (RMSProp, Adagrad)**  
+  Implement adaptive optimizers like RMSProp and Adagrad to provide more choices for gradient-based updates.
+
 
 ## Collaborate  
 Contributions, issue reports, and pull requests are very welcome! Feel free to open an issue if you’d like to suggest new features (dropout, regression outputs, alternative optimizers) or improvements to the existing code.
