@@ -1,0 +1,4 @@
+pandas==2.3.1    # Powerful data structures for data analysis and statistics :contentReference[oaicite:0]{index=0}
+numpy==2.3.1     # Fundamental package for array computing :contentReference[oaicite:1]{index=1}
+scikit-learn==1.7.0  # Machine learning tools (LabelEncoder, metrics) :contentReference[oaicite:2]{index=2}
+matplotlib==3.10.3   # Plotting library (plt) :contentReference[oaicite:3]{index=3}
