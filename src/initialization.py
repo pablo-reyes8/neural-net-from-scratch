@@ -36,6 +36,7 @@ def iniciar_parametros(shape_nn:list , inicialization='Rand' , he_init = None , 
 
     if inicialization == 'He_Normal' and he_init == None:
         bools = [False] + [1 for _ in len(shape_nn)-1]
+        he_init = bools[1:]
 
     if inicialization == 'Rand':
         for i in range(1, dim_layer):
@@ -43,7 +44,7 @@ def iniciar_parametros(shape_nn:list , inicialization='Rand' , he_init = None , 
             parameters['b' + str(i)] = np.zeros((shape_nn[i], 1))
 
     elif inicialization == 'He_Normal':
-        if len(he_init) != (len(bools)-1):
+        if len(he_init) != (len(shape_nn)-1):
             raise ValueError('`he_init` debe tener longitud igual a `len(shape_nn) - 1`')
         
         for i in range(1, dim_layer):
