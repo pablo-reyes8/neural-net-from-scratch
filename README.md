@@ -1,5 +1,14 @@
 # Neural Network From Scratch
 
+
+![Repo size](https://img.shields.io/github/repo-size/pablo-reyes8/neural-net-from-scratch)
+![Last commit](https://img.shields.io/github/last-commit/pablo-reyes8/neural-net-from-scratch)
+![Open issues](https://img.shields.io/github/issues/pablo-reyes8/neural-net-from-scratch)
+![Contributors](https://img.shields.io/github/contributors/pablo-reyes8/neural-net-from-scratch)
+![Forks](https://img.shields.io/github/forks/pablo-reyes8/neural-net-from-scratch?style=social)
+![Stars](https://img.shields.io/github/stars/pablo-reyes8/neural-net-from-scratch?style=social)
+
+
 ## Overview  
 This project provides a modular Python framework for building and training feed-forward neural networks entirely from scratch. You can experiment with binary classification or full multi-class setups (via softmax), customize layer sizes, activation functions, weight initializations (random or He), optimizers (vanilla gradient descent or Adam), learning-rate schedules (including decay), and L2 regularization. All core logic lives in standalone modules under `src/`, while Jupyter notebooks illustrate end-to-end usage and hyperparameter experiments.
 
